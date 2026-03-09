@@ -1,5 +1,5 @@
 {
-  "name": "@eter/oprf",
+  "name": "@etersocial/oprf",
   "version": "1.0.0",
   "description": "RFC 9497 (2HashDH) OPRF on P-256 + Ristretto255 commitments with Schnorr ZK proofs. Interoperable with the eter_oprf Dart package.",
   "author": "Eter <security@eter.app>",
