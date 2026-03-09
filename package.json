@@ -1,0 +1,44 @@
+{
+  "name": "@eter/oprf",
+  "version": "1.0.0",
+  "description": "RFC 9497 (2HashDH) OPRF on P-256 + Ristretto255 commitments with Schnorr ZK proofs. Interoperable with the eter_oprf Dart package.",
+  "author": "Eter <security@eter.app>",
+  "license": "MIT",
+  "homepage": "https://github.com/eter-app/eter-oprf-node",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eter-app/eter-oprf-node.git"
+  },
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.js",
+      "types": "./dist/types/index.d.ts"
+    }
+  },
+  "files": ["dist/", "src/"],
+  "scripts": {
+    "build": "npm run build:cjs && npm run build:esm",
+    "build:cjs": "tsc -p tsconfig.cjs.json",
+    "build:esm": "tsc -p tsconfig.esm.json",
+    "test": "jest",
+    "lint": "eslint src/ test/"
+  },
+  "dependencies": {
+    "@noble/curves": "^1.4.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.0.0",
+    "@types/node": "^22.0.0",
+    "@typescript-eslint/eslint-plugin": "^8.0.0",
+    "@typescript-eslint/parser": "^8.0.0",
+    "eslint": "^9.0.0",
+    "jest": "^29.0.0",
+    "ts-jest": "^29.0.0",
+    "typescript": "^5.0.0"
+  },
+  "engines": { "node": ">=18" }
+}
